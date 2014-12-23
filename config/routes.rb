@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'secrets/index'
+
   root 'welcome#index'
 
   get 'welcome/index'
