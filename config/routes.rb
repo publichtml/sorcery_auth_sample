@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'signup' => 'users#new', as: 'signup'
   resources :users
 
+  get 'login' => 'sessions#new', as: 'login'
   get 'logout' => 'sessions#destroy', as: 'logout'
   resources :sessions, only: [:new, :create]
 
