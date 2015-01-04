@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
 
+  get 'logout' => 'sessions#destroy', as: 'logout'
   resources :sessions, only: [:new, :create]
 
   get 'secrets/index'

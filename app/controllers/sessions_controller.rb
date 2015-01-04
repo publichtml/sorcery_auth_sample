@@ -12,6 +12,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    logout
+    redirect_to root_url, notice: "Logged out!"
+  end
+
   private
 
   def session_params
